@@ -1,0 +1,194 @@
+* {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: 0 !important;
+    box-shadow: 0 !important;
+}
+
+body {
+    background: rgb(4, 19, 107);
+    background: linear-gradient(
+        100deg,
+        rgb(26, 127, 194),
+        rgb(8, 10, 136)
+    );
+    color: white;
+    min-height: 100vh;
+    margin-bottom: 2rem;
+}
+
+header {
+    text-shadow: 2px 2px 15px rgb(26, 127, 194);
+    font-size: 1.2rem;
+}
+
+header,
+form {
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    font-size: 1.8rem;
+    border: none;
+
+    background: #f4f4f4;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    color: rgba(26, 127, 194, 1);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: rgba(26, 127, 194, 1);
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+    background: white;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+form input,
+.todo {
+    color: rgb(88, 87, 87);
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn,
+.check-btn {
+    background-color: rgb(233, 14, 14);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s all ease;
+}
+
+.check-btn {
+    background-color: rgb(26, 127, 194);
+}
+
+.check-btn:hover {
+    background-color: rgba(26, 127, 194, 1);
+    color: white;
+}
+
+.trash-btn:hover {
+    color: white;
+    background-color: rgb(184, 24, 24);
+}
+
+.todo-item {
+    padding: 0rem 1.2rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.fadeOutLeftBig {
+    -webkit-animation-name: fadeOutLeftBig;
+    animation-name: fadeOutLeftBig;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeOutLeftBig {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+}
+@keyframes fadeOutLeftBig {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+    }
+} 
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    font-size: 1.2em;
+    color: rgba(26, 127, 194, 1);
+    width: 15rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: rgba(26, 127, 194, 1);
+    top: 0;
+    right: 0;
+    padding: 1.2rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: white;
+    color: rgba(26, 127, 194, 1);
+}
+/* Kodetopia at github.com/Kodetopia */
